@@ -18,12 +18,13 @@ int main() {
     int i;
     int random_ints[num_ints];
     for (i = 0; i < num_ints; i++) {
-        printf("%d",rand() %50);
+        random_ints[i] = start + rand() % (end - start + 1);
+        printf("%d ", random_ints[i]);
     }
 
     // Get user input for file name to save the list of random integers
     char file_name[50];
-    printf("Enter the name of the file to save: ");
+    printf("\nEnter the name of the file to save: ");
     scanf("%s", file_name);
 
     // Save the list of random integers to the specified file
